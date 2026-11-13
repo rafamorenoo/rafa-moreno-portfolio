@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -199,7 +198,7 @@ h1 em{font-style:normal;color:var(--cyan)}
 <header class="nav">
   <div class="wrap navin">
     <a class="brand" href="#home">RAFA MORENO<span>.</span></a>
-    <nav class="links" aria-label="Main navigation">
+    <nav class="links" aria-label="Main navigation" data-aria="navAria">
       <a href="#about" data-i="navAbout">About</a>
       <a href="#expertise" data-i="navExpertise">Expertise</a>
       <a href="#projects" data-i="navProjects">Projects</a>
@@ -208,7 +207,7 @@ h1 em{font-style:normal;color:var(--cyan)}
       <a href="#contact" data-i="navContact">Contact</a>
       <button class="lang" id="lang">ES</button>
     </nav>
-    <button class="menu" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+    <button class="menu" aria-label="Menu" data-aria="menuAria" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
   </div>
 </header>
 
@@ -224,7 +223,7 @@ h1 em{font-style:normal;color:var(--cyan)}
       <a class="btn" href="mailto:rafamorenoo2004@gmail.com" data-i="contactMe">Get in touch</a>
     </div>
     <div class="meta">
-      <span>⌖ Córdoba, Spain</span>
+      <span data-i="heroLocation">⌖ Córdoba, Spain</span>
       <span>◈ AWS · Qualys · Docker · Terraform</span>
     </div>
   </div>
@@ -234,24 +233,24 @@ h1 em{font-style:normal;color:var(--cyan)}
       <span>rafa@portfolio:~</span>
       <span class="lights"><i></i><i></i><i></i></span>
     </div>
-    <div class="terminal" aria-label="Interactive terminal">
+    <div class="terminal" aria-label="Interactive terminal" data-aria="terminalAria">
       <div><span class="prompt">$</span> whoami</div>
       <div class="value">rafa-moreno</div>
       <div><span class="prompt">$</span> focus --areas</div>
-      <div class="value">cloud-security · vulnerability-management</div>
-      <div class="value">blue-team · container-security</div>
+      <div class="value" data-i="termFocus1">cloud-security · vulnerability-management</div>
+      <div class="value" data-i="termFocus2">blue-team · container-security</div>
       <div><span class="prompt">$</span> stack --core</div>
       <div class="value">AWS / Qualys / Linux / Docker / Terraform</div>
-      <div class="dim">Type "help" to explore</div>
+      <div class="dim" data-i="termHint">Type "help" to explore</div>
       <div class="terminal-line">
         <span class="prompt">$</span>
-        <input id="cmd" aria-label="Terminal command" autocomplete="off" spellcheck="false" placeholder="help">
+        <input id="cmd" aria-label="Terminal command" data-aria="cmdAria" autocomplete="off" spellcheck="false" placeholder="help">
         <span class="prompt">▌</span>
       </div>
       <div id="output" class="value" aria-live="polite"></div>
     </div>
     <div class="statgrid">
-      <div class="stat"><b>Cloud Security</b><small>AWS · CSPM · Infrastructure</small></div>
+      <div class="stat"><b data-i="statCloud">Cloud Security</b><small>AWS · CSPM · Infrastructure</small></div>
       <div class="stat"><b>Qualys</b><small>VMDR · TotalCloud · EDR</small></div>
     </div>
   </div>
@@ -276,11 +275,12 @@ h1 em{font-style:normal;color:var(--cyan)}
         <!-- Academic award with diploma image -->
         <div class="award">
           <div class="award-content">
-            <a href="assets/certifications/smr-award.jpg" target="_blank" rel="noreferrer" aria-label="View academic award diploma">
+            <a href="assets/certifications/smr-award.jpg" target="_blank" rel="noreferrer" aria-label="View academic award diploma" data-aria="diplomaAria">
               <img
                 class="award-image"
                 src="assets/certifications/smr-award.jpg"
                 alt="Diploma for the best academic record in Microcomputer Systems and Networks"
+                data-alt="diplomaAlt"
                 loading="lazy"
               >
             </a>
@@ -295,7 +295,7 @@ h1 em{font-style:normal;color:var(--cyan)}
           <div class="ico">🎓</div>
           <div>
             <b data-i="studyTitle">Computer Engineering</b>
-            <small>UNED · 2026 — Present</small>
+            <small data-i="studyDate">UNED · 2026 — Present</small>
           </div>
         </div>
 
@@ -313,49 +313,49 @@ h1 em{font-style:normal;color:var(--cyan)}
 
 <section class="section" id="expertise">
   <div class="wrap">
-    <div class="kicker">02 / EXPERTISE</div>
+    <div class="kicker" data-i="expertK">02 / EXPERTISE</div>
     <h2 class="heading" data-i="expertTitle">Areas I work with</h2>
     <p class="sub" data-i="expertSub">A combination of security platforms, cloud infrastructure, development and automation.</p>
 
     <div class="grid">
       <article class="card">
         <div class="cardicon">☁</div>
-        <h3>Cloud Security</h3>
+        <h3 data-i="cloudTitle">Cloud Security</h3>
         <p data-i="cloudDesc">Cloud infrastructure, security posture and secure architecture across AWS services.</p>
         <div class="tags"><span class="tag">AWS</span><span class="tag">ECS Fargate</span><span class="tag">CSPM</span><span class="tag">IAM</span></div>
       </article>
 
       <article class="card">
         <div class="cardicon">◈</div>
-        <h3>Vulnerability Management</h3>
+        <h3 data-i="vulnTitle">Vulnerability Management</h3>
         <p data-i="vulnDesc">Discovery, assessment, risk prioritization and remediation workflows.</p>
-        <div class="tags"><span class="tag">Qualys VMDR</span><span class="tag">TruRisk</span><span class="tag">Remediation</span></div>
+        <div class="tags"><span class="tag">Qualys VMDR</span><span class="tag">TruRisk</span><span class="tag" data-i="tagRemediation">Remediation</span></div>
       </article>
 
       <article class="card">
         <div class="cardicon">⌁</div>
-        <h3>Blue Team & EDR</h3>
+        <h3 data-i="blueTitle">Blue Team & EDR</h3>
         <p data-i="blueDesc">Defensive security concepts, endpoint monitoring and threat investigation.</p>
-        <div class="tags"><span class="tag">Qualys EDR</span><span class="tag">Threat Hunting</span><span class="tag">Incident Response</span></div>
+        <div class="tags"><span class="tag">Qualys EDR</span><span class="tag" data-i="tagHunting">Threat Hunting</span><span class="tag" data-i="tagIR">Incident Response</span></div>
       </article>
 
       <article class="card">
         <div class="cardicon">▣</div>
-        <h3>Container Security</h3>
+        <h3 data-i="containerTitle">Container Security</h3>
         <p data-i="containerDesc">Security considerations across container images, registries and Kubernetes workloads.</p>
         <div class="tags"><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Qualys KCS</span></div>
       </article>
 
       <article class="card">
         <div class="cardicon">⌘</div>
-        <h3>Application Security</h3>
+        <h3 data-i="appTitle">Application Security</h3>
         <p data-i="appDesc">Web application and API security concepts, scanning and secure development.</p>
         <div class="tags"><span class="tag">TotalAppSec</span><span class="tag">APIs</span><span class="tag">Burp</span></div>
       </article>
 
       <article class="card">
         <div class="cardicon">⚙</div>
-        <h3>Development & Automation</h3>
+        <h3 data-i="devTitle">Development & Automation</h3>
         <p data-i="devDesc">Building applications, infrastructure automation and repeatable deployments.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">Terraform</span><span class="tag">GitHub Actions</span></div>
       </article>
@@ -365,13 +365,13 @@ h1 em{font-style:normal;color:var(--cyan)}
 
 <section class="section" id="projects">
   <div class="wrap">
-    <div class="kicker">03 / SELECTED WORK</div>
+    <div class="kicker" data-i="projectsK">03 / SELECTED WORK</div>
     <h2 class="heading" data-i="projectsTitle">Projects & technical work</h2>
     <p class="sub" data-i="projectsSub">Selected projects demonstrating cloud deployment, software engineering and hands-on security learning.</p>
 
     <div class="grid">
       <article class="card project">
-        <div class="topline"><span>Cloud infrastructure</span><span>01</span></div>
+        <div class="topline"><span data-i="projCloud">Cloud infrastructure</span><span>01</span></div>
         <h3>LinkTrack</h3>
         <p data-i="linkDesc">Cloud infrastructure deployed on AWS using ECS Fargate, RDS, Redis and SQS, provisioned with Terraform.</p>
         <div class="tags"><span class="tag">AWS</span><span class="tag">ECS Fargate</span><span class="tag">Terraform</span><span class="tag">RDS</span></div>
@@ -379,15 +379,15 @@ h1 em{font-style:normal;color:var(--cyan)}
       </article>
 
       <article class="card project">
-        <div class="topline"><span>Cybersecurity</span><span>02</span></div>
+        <div class="topline"><span data-i="projCyber">Cybersecurity</span><span>02</span></div>
         <h3>Security Writeups</h3>
         <p data-i="writeDesc">A space for technical notes, security labs, vulnerability analysis and documented learning.</p>
-        <div class="tags"><span class="tag">Security Labs</span><span class="tag">Writeups</span><span class="tag">Research</span></div>
+        <div class="tags"><span class="tag" data-i="tagLabs">Security Labs</span><span class="tag">Writeups</span><span class="tag" data-i="tagResearch">Research</span></div>
         <a href="https://github.com/rafamorenoo/security-writeups" target="_blank" rel="noreferrer" data-i="repoLink">View repository ↗</a>
       </article>
 
       <article class="card project">
-        <div class="topline"><span>Full stack · AI</span><span>03</span></div>
+        <div class="topline"><span data-i="projFull">Full stack · AI</span><span>03</span></div>
         <h3>SkillSwap</h3>
         <p data-i="skillDesc">A full-stack skill exchange platform using AI-powered matching, mutual likes and real-time chat, with a Flutter mobile app.</p>
         <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">React</span><span class="tag">Flutter</span><span class="tag">PostgreSQL</span></div>
@@ -401,7 +401,7 @@ h1 em{font-style:normal;color:var(--cyan)}
 
 <section class="section" id="certifications">
   <div class="wrap">
-    <div class="kicker">04 / CREDENTIALS</div>
+    <div class="kicker" data-i="certK">04 / CREDENTIALS</div>
     <h2 class="heading" data-i="certTitle">Certifications & training</h2>
     <p class="sub" data-i="certSub">Professional training focused on cloud security, application security, endpoint protection and vulnerability management.</p>
 
@@ -413,14 +413,14 @@ h1 em{font-style:normal;color:var(--cyan)}
       <div class="cert"><div class="certmark">Q</div><div><b>Vulnerability Management Detection and Response</b><small>Qualys · Nov 2026 — Nov 2028</small></div></div>
       <div class="cert"><div class="certmark">AWS</div><div><b>AWS Solutions Architect — Associate (SAA-C03)</b><small data-i="awsCourse">Udemy · Preparation course (not the official AWS certification)</small></div></div>
       <div class="cert"><div class="certmark">B2</div><div><b>Cambridge English B2 First</b><small>Cambridge English · Sep 2026</small></div></div>
-      <div class="cert"><div class="certmark">C1</div><div><b>Aptis ESOL General C1</b><small>British Council · Dec 2025</small></div></div>
+      <div class="cert"><div class="certmark">C1</div><div><b>Aptis ESOL General C1</b><small data-i="aptisDate">British Council · Dec 2025</small></div></div>
     </div>
   </div>
 </section>
 
 <section class="section" id="experience">
   <div class="wrap">
-    <div class="kicker">05 / BACKGROUND</div>
+    <div class="kicker" data-i="expK">05 / BACKGROUND</div>
     <h2 class="heading" data-i="expTitle">Experience & education</h2>
 
     <div class="aboutgrid">
@@ -429,17 +429,17 @@ h1 em{font-style:normal;color:var(--cyan)}
         <div class="timeline">
           <div class="item">
             <h3>Cleverbyte Consulting</h3>
-            <div class="date">Mar 2026 — May 2026 · Internship</div>
+            <div class="date" data-i="dateClever">Mar 2026 — May 2026 · Internship</div>
             <p data-i="cleverDesc">Developed AI-powered applications and WordPress integrations, automated endpoint antivirus installation with PowerShell, and contributed to ENS, GDPR and application security tasks.</p>
           </div>
           <div class="item">
             <h3>Evernes</h3>
-            <div class="date">Feb 2025 — Mar 2025 · Internship</div>
-            <p>WordPress, Divi and WooCommerce.</p>
+            <div class="date" data-i="dateEvernes">Feb 2025 — Mar 2025 · Internship</div>
+            <p data-i="evernesDesc">WordPress, Divi and WooCommerce.</p>
           </div>
           <div class="item">
-            <h3>Córdoba Provincial Council</h3>
-            <div class="date">Mar 2024 — Jun 2024 · Internship</div>
+            <h3 data-i="dipTitle">Córdoba Provincial Council</h3>
+            <div class="date" data-i="dateDip">Mar 2024 — Jun 2024 · Internship</div>
             <p data-i="dipDesc">WordPress administration, social media management and Microsoft Office.</p>
           </div>
         </div>
@@ -450,21 +450,21 @@ h1 em{font-style:normal;color:var(--cyan)}
         <div class="timeline">
           <div class="item">
             <h3>UNED</h3>
-            <div class="date">Oct 2026 — Present</div>
+            <div class="date" data-i="dateUned">Oct 2026 — Present</div>
             <p data-i="degree">Computer Engineering</p>
           </div>
           <div class="item">
             <h3>IES Trassierra</h3>
-            <div class="date">Sep 2026 — Present</div>
+            <div class="date" data-i="dateTrass">Sep 2026 — Present</div>
             <p data-i="specialty">Cybersecurity Specialization in IT Environments</p>
           </div>
           <div class="item">
-            <h3>Multiplatform Application Development</h3>
+            <h3 data-i="damTitle">Multiplatform Application Development</h3>
             <div class="date" data-i="damDate">Previous studies</div>
             <p>DAM</p>
           </div>
           <div class="item">
-            <h3>Microcomputer Systems and Networks</h3>
+            <h3 data-i="smrTitle">Microcomputer Systems and Networks</h3>
             <div class="date" data-i="smrDate">Previous studies</div>
             <p data-i="smrAward">Award for best academic record</p>
           </div>
@@ -483,7 +483,7 @@ h1 em{font-style:normal;color:var(--cyan)}
         <p data-i="contactSub">Open to junior opportunities in cybersecurity, cloud security and vulnerability management.</p>
       </div>
       <div class="actions">
-        <a class="btn primary" href="mailto:rafamorenoo2004@gmail.com">Email me ↗</a>
+        <a class="btn primary" href="mailto:rafamorenoo2004@gmail.com" data-i="emailMe">Email me ↗</a>
         <a class="btn" href="https://www.linkedin.com/in/rafa-moreno-5b44b4307" target="_blank" rel="noreferrer">LinkedIn ↗</a>
         <a class="btn" href="https://github.com/rafamorenoo" target="_blank" rel="noreferrer">GitHub ↗</a>
       </div>
@@ -496,95 +496,173 @@ h1 em{font-style:normal;color:var(--cyan)}
 <footer class="footer">
   <div class="wrap footerin">
     <span>© <span id="year"></span> Rafa Moreno. <span data-i="rights">Built with curiosity and a security mindset.</span></span>
-    <span>Córdoba, Spain · <a class="textlink" href="mailto:rafamorenoo2004@gmail.com">Contact</a></span>
+    <span><span data-i="footLocation">Córdoba, Spain</span> · <a class="textlink" href="mailto:rafamorenoo2004@gmail.com" data-i="footContact">Contact</a></span>
   </div>
 </footer>
 
 <script>
 const copy={
 en:{
+pageTitle:"Rafa Moreno — Cybersecurity & Cloud Security",
+pageDesc:"Rafa Moreno — Cybersecurity, Cloud Security and Vulnerability Management.",
+ogTitle:"Rafa Moreno | Cybersecurity & Cloud Security",
+ogDesc:"Cloud security, vulnerability management, Blue Team and infrastructure.",
+navAria:"Main navigation",menuAria:"Menu",terminalAria:"Interactive terminal",cmdAria:"Terminal command",
+diplomaAria:"View academic award diploma",
+diplomaAlt:"Diploma for the best academic record in Microcomputer Systems and Networks",
 navAbout:"About",navExpertise:"Expertise",navProjects:"Projects",navCerts:"Certifications",navExperience:"Experience",navContact:"Contact",
 eyebrow:"CYBERSECURITY · CLOUD · INFRASTRUCTURE",
 heroTitle:'Securing the cloud.<br><em>Protecting what matters.</em>',
 heroLead:"I’m Rafa Moreno, an IT student focused on cybersecurity, cloud infrastructure and vulnerability management. I combine software development and systems knowledge to understand, build and secure digital environments.",
 viewProjects:"Explore projects ↗",contactMe:"Get in touch",
+heroLocation:"⌖ Córdoba, Spain",
+termFocus1:"cloud-security · vulnerability-management",termFocus2:"blue-team · container-security",
+termHint:'Type "help" to explore',
+statCloud:"Cloud Security",
 aboutK:"01 / ABOUT",aboutTitle:"A technical mindset, focused on security.",
 aboutSub:"My background connects software engineering, systems administration and cloud technologies with a growing specialization in cybersecurity.",
 aboutText:"<p>I’m studying Computer Engineering at UNED and completing a Cybersecurity Specialization Course. Previously, I completed vocational training in Multiplatform Application Development (DAM) and Microcomputer Systems and Networks (SMR).</p><p>I’m especially interested in cloud security, vulnerability management, risk analysis and infrastructure protection. I enjoy understanding how systems work end to end — from application code and deployment pipelines to cloud services and security controls.</p><p>During my internships at Cleverbyte, Evernes and the Córdoba Provincial Council, I contributed to software development, automation, systems administration and security-related work, including Spain’s National Security Framework (ENS).</p>",
 highlights:"HIGHLIGHTS",awardTitle:"Top academic record — SMR",
 awardDesc:"Award for best academic record in Microcomputer Systems and Networks.",
-studyTitle:"Computer Engineering",cyberTitle:"Cybersecurity Specialization",
+studyTitle:"Computer Engineering",studyDate:"UNED · 2026 — Present",
+cyberTitle:"Cybersecurity Specialization",
 cyberDesc:"Cybersecurity in IT environments · 2026 — Present",
+expertK:"02 / EXPERTISE",
 expertTitle:"Areas I work with",
 expertSub:"A combination of security platforms, cloud infrastructure, development and automation.",
+cloudTitle:"Cloud Security",vulnTitle:"Vulnerability Management",blueTitle:"Blue Team & EDR",
+containerTitle:"Container Security",appTitle:"Application Security",devTitle:"Development & Automation",
+tagRemediation:"Remediation",tagHunting:"Threat Hunting",tagIR:"Incident Response",
 cloudDesc:"Cloud infrastructure, security posture and secure architecture across AWS services.",
 vulnDesc:"Discovery, assessment, risk prioritization and remediation workflows.",
 blueDesc:"Defensive security concepts, endpoint monitoring and threat investigation.",
 containerDesc:"Security considerations across container images, registries and Kubernetes workloads.",
 appDesc:"Web application and API security concepts, scanning and secure development.",
 devDesc:"Building applications, infrastructure automation and repeatable deployments.",
+projectsK:"03 / SELECTED WORK",
 projectsTitle:"Projects & technical work",
 projectsSub:"Selected projects demonstrating cloud deployment, software engineering and hands-on security learning.",
+projCloud:"Cloud infrastructure",projCyber:"Cybersecurity",projFull:"Full stack · AI",
+tagLabs:"Security Labs",tagResearch:"Research",
 linkDesc:"Cloud infrastructure deployed on AWS using ECS Fargate, RDS, Redis and SQS, provisioned with Terraform.",
 writeDesc:"A space for technical notes, security labs, vulnerability analysis and documented learning.",
 skillDesc:"A full-stack skill exchange platform using AI-powered matching, mutual likes and real-time chat, with a Flutter mobile app.",
 viewGithub:"Explore on GitHub ↗",repoLink:"View repository ↗",viewGithub2:"Explore on GitHub ↗",
 projectNote:"Project links currently point to the public GitHub profile/repository. Add the specific project repositories and technical diagrams before publishing.",
+certK:"04 / CREDENTIALS",
 certTitle:"Certifications & training",
 certSub:"Professional training focused on cloud security, application security, endpoint protection and vulnerability management.",
 awsCourse:"Udemy · Preparation course (not the official AWS certification)",
+aptisDate:"British Council · Dec 2025",
+expK:"05 / BACKGROUND",
 expTitle:"Experience & education",workTitle:"Experience",
+dateClever:"Mar 2026 — May 2026 · Internship",
+dateEvernes:"Feb 2025 — Mar 2025 · Internship",
+dateDip:"Mar 2024 — Jun 2024 · Internship",
 cleverDesc:"Developed AI-powered applications and WordPress integrations, automated endpoint antivirus installation with PowerShell, and contributed to ENS, GDPR and application security tasks.",
+evernesDesc:"WordPress, Divi and WooCommerce.",
+dipTitle:"Córdoba Provincial Council",
 dipDesc:"WordPress administration, social media management and Microsoft Office.",
 educationTitle:"Education",degree:"Computer Engineering",
+dateUned:"Oct 2026 — Present",dateTrass:"Sep 2026 — Present",
 specialty:"Cybersecurity Specialization in IT Environments",
+damTitle:"Multiplatform Application Development",smrTitle:"Microcomputer Systems and Networks",
 damDate:"Previous studies",smrDate:"Previous studies",
 smrAward:"Award for best academic record",
 contactK:"06 / CONTACT",contactTitle:"Let’s connect.",
 contactSub:"Open to junior opportunities in cybersecurity, cloud security and vulnerability management.",
-rights:"Built with curiosity and a security mindset."
+emailMe:"Email me ↗",
+rights:"Built with curiosity and a security mindset.",
+footLocation:"Córdoba, Spain",footContact:"Contact",
+t:{
+  help:"commands: whoami · skills · projects · contact · clear",
+  whoami:"Rafa Moreno — Cybersecurity & Cloud Security",
+  skills:"AWS · Qualys · Docker · Kubernetes · Terraform · Linux · Python · Java",
+  projects:"LinkTrack · Security Writeups · SkillSwap",
+  contact:"rafamorenoo2004@gmail.com",
+  notFound:"Command not found. Type help."
+}
 },
 es:{
+pageTitle:"Rafa Moreno — Ciberseguridad y Seguridad Cloud",
+pageDesc:"Rafa Moreno — Ciberseguridad, seguridad cloud y gestión de vulnerabilidades.",
+ogTitle:"Rafa Moreno | Ciberseguridad y Seguridad Cloud",
+ogDesc:"Seguridad cloud, gestión de vulnerabilidades, Blue Team e infraestructura.",
+navAria:"Navegación principal",menuAria:"Menú",terminalAria:"Terminal interactiva",cmdAria:"Comando de la terminal",
+diplomaAria:"Ver diploma del premio académico",
+diplomaAlt:"Diploma al mejor expediente académico en Sistemas Microinformáticos y Redes",
 navAbout:"Sobre mí",navExpertise:"Especialización",navProjects:"Proyectos",navCerts:"Certificaciones",navExperience:"Experiencia",navContact:"Contacto",
 eyebrow:"CIBERSEGURIDAD · CLOUD · INFRAESTRUCTURA",
 heroTitle:'Protegiendo la nube.<br><em>Asegurando lo que importa.</em>',
 heroLead:"Soy Rafa Moreno, estudiante de informática enfocado en ciberseguridad, infraestructura cloud y gestión de vulnerabilidades. Combino conocimientos de desarrollo de software y sistemas para comprender, construir y proteger entornos digitales.",
 viewProjects:"Ver proyectos ↗",contactMe:"Contactar",
+heroLocation:"⌖ Córdoba, España",
+termFocus1:"seguridad-cloud · gestión-de-vulnerabilidades",termFocus2:"blue-team · seguridad-de-contenedores",
+termHint:'Escribe "help" para explorar',
+statCloud:"Seguridad Cloud",
 aboutK:"01 / SOBRE MÍ",aboutTitle:"Mentalidad técnica, enfocada en la seguridad.",
 aboutSub:"Mi trayectoria conecta desarrollo de software, administración de sistemas y tecnologías cloud con una especialización creciente en ciberseguridad.",
 aboutText:"<p>Estudio Ingeniería Informática en la UNED y curso la Especialización en Ciberseguridad en Entornos de las Tecnologías de la Información. Anteriormente completé los ciclos de Desarrollo de Aplicaciones Multiplataforma (DAM) y Sistemas Microinformáticos y Redes (SMR).</p><p>Me interesan especialmente la seguridad cloud, la gestión de vulnerabilidades, el análisis de riesgos y la protección de infraestructuras. Me gusta comprender cómo funcionan los sistemas de extremo a extremo: desde el código y los procesos de despliegue hasta los servicios cloud y sus controles de seguridad.</p><p>Durante mis prácticas en Cleverbyte, Evernes y la Diputación de Córdoba he participado en proyectos de desarrollo, automatización, administración de sistemas y tareas relacionadas con la seguridad, incluyendo el Esquema Nacional de Seguridad (ENS).</p>",
 highlights:"DATOS DESTACADOS",awardTitle:"Premio al mejor expediente — SMR",
 awardDesc:"Reconocimiento al mejor expediente académico en Sistemas Microinformáticos y Redes.",
-studyTitle:"Grado en Ingeniería Informática",cyberTitle:"Especialización en Ciberseguridad",
+studyTitle:"Grado en Ingeniería Informática",studyDate:"UNED · 2026 — Actualidad",
+cyberTitle:"Especialización en Ciberseguridad",
 cyberDesc:"Ciberseguridad en entornos de TI · 2026 — Actualidad",
+expertK:"02 / ESPECIALIZACIÓN",
 expertTitle:"Áreas de especialización",
 expertSub:"Combinación de plataformas de seguridad, infraestructura cloud, desarrollo y automatización.",
+cloudTitle:"Seguridad Cloud",vulnTitle:"Gestión de Vulnerabilidades",blueTitle:"Blue Team y EDR",
+containerTitle:"Seguridad de Contenedores",appTitle:"Seguridad de Aplicaciones",devTitle:"Desarrollo y Automatización",
+tagRemediation:"Remediación",tagHunting:"Caza de amenazas",tagIR:"Respuesta a incidentes",
 cloudDesc:"Infraestructura cloud, postura de seguridad y arquitectura segura en servicios AWS.",
 vulnDesc:"Descubrimiento, evaluación, priorización de riesgos y procesos de remediación.",
 blueDesc:"Seguridad defensiva, monitorización de endpoints e investigación de amenazas.",
 containerDesc:"Seguridad de imágenes, registros de contenedores y cargas de trabajo Kubernetes.",
 appDesc:"Seguridad de aplicaciones web y APIs, escaneo y desarrollo seguro.",
 devDesc:"Desarrollo de aplicaciones, automatización de infraestructura y despliegues reproducibles.",
+projectsK:"03 / TRABAJOS DESTACADOS",
 projectsTitle:"Proyectos y trabajo técnico",
 projectsSub:"Una selección de proyectos que demuestra experiencia en despliegues cloud, ingeniería de software y aprendizaje práctico en ciberseguridad.",
+projCloud:"Infraestructura cloud",projCyber:"Ciberseguridad",projFull:"Full stack · IA",
+tagLabs:"Laboratorios de seguridad",tagResearch:"Investigación",
 linkDesc:"Infraestructura desplegada en AWS mediante ECS Fargate, RDS, Redis y SQS, aprovisionada con Terraform.",
 writeDesc:"Espacio de documentación técnica, laboratorios de seguridad, análisis de vulnerabilidades y aprendizaje práctico.",
 skillDesc:"Plataforma full stack para intercambio de habilidades con matching mediante IA, likes mutuos y chat en tiempo real, junto con aplicación móvil Flutter.",
 viewGithub:"Ver en GitHub ↗",repoLink:"Ver repositorio ↗",viewGithub2:"Ver en GitHub ↗",
 projectNote:"Los enlaces de proyectos apuntan actualmente al perfil o repositorio público de GitHub. Añade los repositorios específicos y diagramas técnicos antes de publicar.",
+certK:"04 / CREDENCIALES",
 certTitle:"Certificaciones y formación",
 certSub:"Formación especializada en seguridad cloud, seguridad de aplicaciones, protección de endpoints y gestión de vulnerabilidades.",
 awsCourse:"Udemy · Curso preparatorio (no es la certificación oficial de AWS)",
+aptisDate:"British Council · Dic 2025",
+expK:"05 / TRAYECTORIA",
 expTitle:"Experiencia y formación académica",workTitle:"Experiencia",
+dateClever:"Mar 2026 — May 2026 · Prácticas",
+dateEvernes:"Feb 2025 — Mar 2025 · Prácticas",
+dateDip:"Mar 2024 — Jun 2024 · Prácticas",
 cleverDesc:"Desarrollo de aplicaciones con IA e integraciones WordPress, automatización de la instalación de antivirus en endpoints mediante PowerShell y colaboración en tareas de ENS, RGPD y seguridad de aplicaciones.",
+evernesDesc:"WordPress, Divi y WooCommerce.",
+dipTitle:"Diputación de Córdoba",
 dipDesc:"Administración de WordPress, gestión de redes sociales y Microsoft Office.",
 educationTitle:"Formación",degree:"Grado en Ingeniería Informática",
+dateUned:"Oct 2026 — Actualidad",dateTrass:"Sep 2026 — Actualidad",
 specialty:"Curso de Especialización en Ciberseguridad en Entornos de las TI",
+damTitle:"Desarrollo de Aplicaciones Multiplataforma",smrTitle:"Sistemas Microinformáticos y Redes",
 damDate:"Formación anterior",smrDate:"Formación anterior",
 smrAward:"Premio al mejor expediente académico",
 contactK:"06 / CONTACTO",contactTitle:"Hablemos.",
 contactSub:"Abierto a oportunidades junior en ciberseguridad, seguridad cloud y gestión de vulnerabilidades.",
-rights:"Desarrollado con curiosidad y mentalidad de seguridad."
+emailMe:"Escríbeme ↗",
+rights:"Desarrollado con curiosidad y mentalidad de seguridad.",
+footLocation:"Córdoba, España",footContact:"Contacto",
+t:{
+  help:"comandos: whoami · skills · projects · contact · clear",
+  whoami:"Rafa Moreno — Ciberseguridad y Seguridad Cloud",
+  skills:"AWS · Qualys · Docker · Kubernetes · Terraform · Linux · Python · Java",
+  projects:"LinkTrack · Security Writeups · SkillSwap",
+  contact:"rafamorenoo2004@gmail.com",
+  notFound:"Comando no encontrado. Escribe help."
+}
 }
 };
 
@@ -592,18 +670,37 @@ let lang="en";
 
 function setLang(next){
   lang=next;
+  const c=copy[next];
   document.documentElement.lang=next;
   document.getElementById("lang").textContent=next==="en"?"ES":"EN";
 
+  document.title=c.pageTitle;
+  document.querySelector('meta[name="description"]').setAttribute("content",c.pageDesc);
+  document.querySelector('meta[property="og:title"]').setAttribute("content",c.ogTitle);
+  document.querySelector('meta[property="og:description"]').setAttribute("content",c.ogDesc);
+
   document.querySelectorAll("[data-i]").forEach(el=>{
     const k=el.dataset.i;
-    if(copy[next][k])el.textContent=copy[next][k];
+    if(c[k])el.textContent=c[k];
   });
 
   document.querySelectorAll("[data-html]").forEach(el=>{
     const k=el.dataset.html;
-    if(copy[next][k])el.innerHTML=copy[next][k];
+    if(c[k])el.innerHTML=c[k];
   });
+
+  document.querySelectorAll("[data-aria]").forEach(el=>{
+    const k=el.dataset.aria;
+    if(c[k])el.setAttribute("aria-label",c[k]);
+  });
+
+  document.querySelectorAll("[data-alt]").forEach(el=>{
+    const k=el.dataset.alt;
+    if(c[k])el.setAttribute("alt",c[k]);
+  });
+
+  // Limpia la salida de la terminal al cambiar de idioma
+  document.getElementById("output").textContent="";
 }
 
 document.getElementById("lang").addEventListener("click",()=>{
@@ -620,17 +717,18 @@ cmd.addEventListener("keydown",e=>{
   if(e.key!=="Enter")return;
 
   const v=cmd.value.trim().toLowerCase();
+  const t=copy[lang].t;
 
   const responses={
-    help:"commands: whoami · skills · projects · contact · clear",
-    whoami:"Rafa Moreno — Cybersecurity & Cloud Security",
-    skills:"AWS · Qualys · Docker · Kubernetes · Terraform · Linux · Python · Java",
-    projects:"LinkTrack · Security Writeups · SkillSwap",
-    contact:"rafamorenoo2004@gmail.com",
+    help:t.help,
+    whoami:t.whoami,
+    skills:t.skills,
+    projects:t.projects,
+    contact:t.contact,
     clear:""
   };
 
-  out.textContent=responses[v]??"Command not found. Type help.";
+  out.textContent=responses[v]??t.notFound;
   if(v==="clear")out.textContent="";
   cmd.value="";
 });
